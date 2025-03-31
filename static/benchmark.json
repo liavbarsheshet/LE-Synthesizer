@@ -1,0 +1,1342 @@
+[
+  {
+    "p": [
+      "True"
+    ],
+    "q": [
+      "a == b"
+    ],
+    "linv": "a == b",
+    "program": "a := b ; while i < n do ( a := a + 1 ; b := b + 1 )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "m >= 0"
+    ],
+    "q": [
+      "(x == 0) and (y == m)"
+    ],
+    "linv": "( (x + y) == m ) and ( x >= 0 )",
+    "program": "x := m ; y := 0 ; while x > 0 do ( x := x - 1 ; y := y + 1 )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "b >= 0"
+    ],
+    "q": [
+      "product == ( a * b )"
+    ],
+    "linv": "( product == ( a * count ) ) and ( count <= b )",
+    "program": "product := 0 ; count := 0 ; while count < b do ( product := product + a ; count := count + 1 )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "True"
+    ],
+    "q": [
+      "(x == y_init) and (y == x_init)"
+    ],
+    "linv": "False",
+    "program": "x_init := x; y_init:=y ; temp := x ; x := y ; y := temp",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "n >= 0"
+    ],
+    "q": [
+      "sum == ( n * ( n + 1 ) )"
+    ],
+    "linv": "( sum == ( i * ( i + 1 ) ) ) and ( i <= n )",
+    "program": "sum := 0 ; i := 0 ; while i < n do (  i := i + 1; sum := sum + ( 2 * i ) )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "x == 2"
+    ],
+    "q": [
+      "x == 8"
+    ],
+    "linv": "False",
+    "program": "x := x * ??",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "x == 2"
+    ],
+    "q": [
+      "True"
+    ],
+    "linv": "False",
+    "program": "x := x * ??; assert x == 8",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( product == 0 ) and ( b == 5 )"
+    ],
+    "q": [
+      "( product == 25 ) and ( b == 5 )"
+    ],
+    "linv": "b >= 0",
+    "program": "product := b * ?? ; assert ( product ) == ( b * 5 ) ; if product == 0 then while b < 5 do (b := b + 1) else b := 5",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( n == 3 ) and ( cube == 0 )"
+    ],
+    "q": [
+      "( n == 3 ) and ( cube == 24 )"
+    ],
+    "linv": "False",
+    "program": "cube := ( ( ( n * n ) * n ) - ?? )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( ( a == 3 ) and ( b == 4 ) ) and ( sum == 0 )"
+    ],
+    "q": [
+      "( ( a == 3 ) and ( b == 4 ) ) and ( sum == 10 )"
+    ],
+    "linv": "False",
+    "program": "sum := ( ( a + b ) + ?? )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( ( c == 2 ) and ( d == 6 ) ) and ( product == 0 )"
+    ],
+    "q": [
+      "( ( c == 2 ) and ( d == 6 ) ) and ( product == 24 )"
+    ],
+    "linv": "False",
+    "program": "product := ( ( c * d ) * ?? )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( t == 0 ) and ( x == 2 )",
+      "( t == 0 ) and ( x == 3 )"
+    ],
+    "q": [
+      "( t == 6 ) and ( x == 2 )",
+      "( t == 9 ) and ( x == 3 )"
+    ],
+    "linv": "False",
+    "program": "t := x * ??",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( ( e == 8 ) and ( f == 3 ) ) and ( difference == 0 )"
+    ],
+    "q": [
+      "( ( e == 8 ) and ( f == 3 ) ) and ( difference == 2 )"
+    ],
+    "linv": "False",
+    "program": "difference := ( ( e - f ) - ?? )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "x == 5"
+    ],
+    "q": [
+      "( x == 5 ) and ( result == 1 )"
+    ],
+    "linv": "False",
+    "program": "result := x % ??",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 1 ) and ( y == 2 )"
+    ],
+    "q": [
+      "( x == 2 ) and ( y == 4 )"
+    ],
+    "linv": "False",
+    "program": "x := x + 1 ; y := y * 2",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 3 ) and ( y == 4 )"
+    ],
+    "q": [
+      "( x == 7 ) and ( y == 4 ) "
+    ],
+    "linv": "False",
+    "program": "x := x + y ; if ( ( x * y ) < 10 ) then y := y + 1 else skip",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( y == 4 )"
+    ],
+    "q": [
+      "( y == 0 )"
+    ],
+    "linv": "y >= 0",
+    "program": "while ( y > 0 ) do ( y := y - 1 )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( y <= i ) and ( x == 3 )"
+    ],
+    "q": [
+      "y >= i"
+    ],
+    "linv": "y <= i",
+    "program": "while ( y < i ) do ( x := x + y ; if ( ( x * y ) < 10 ) then y := y + 1 else skip )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( ( n == 3 ) and ( valid == True ) ) and ( prev == 2 )"
+    ],
+    "q": [
+      "( ( n == 3 ) and ( valid == True ) ) and ( prev == 3 )"
+    ],
+    "linv": "False",
+    "program": "valid := ?? ; assert ( n > prev ) ; prev := n",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( ( x == 1 ) and ( y == 2 ) ) and ( result == 0 )"
+    ],
+    "q": [
+      "( ( x == 1 ) and ( y == 2 ) ) and ( result == 3 )"
+    ],
+    "linv": "False",
+    "program": "result := ?? ; assert ( result == ( x + y ) )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( product == 0 ) and ( b == 5 )"
+    ],
+    "q": [
+      "( product == 25 ) and ( b == 5 )"
+    ],
+    "linv": "b >= 0",
+    "program": "product := ( b * ?? ) ; assert ( product == ( b * 5 ) ) ; if product == 0 then while b < 5 do ( b := b + 1 ) else b := 5",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( product == 0 ) and ( b == 4 )"
+    ],
+    "q": [
+      "( product == 16 ) and ( b == 4 )"
+    ],
+    "linv": "( b >= 0 )",
+    "program": "product := ( b * ?? ) ; assert ( product == ( b * 4 ) ) ; skip",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( product == 0 ) and ( b == 4 )"
+    ],
+    "q": [
+      "( product == 16 ) and ( b == 0 )"
+    ],
+    "linv": "False",
+    "program": "product := ( b * ?? ) ; assert ( product == ( b * 4 ) ) ; if ( product == 0 ) then ( b := 4 ) else ( b := 0 )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( product == 0 ) and ( b == 8 )"
+    ],
+    "q": [
+      "( product == 32 ) and ( b == 0 )"
+    ],
+    "linv": "b >= 0",
+    "program": "product := ( b * ?? ) ; assert ( product == ( b * 4 ) ) ; if ( product == 0 ) then b := 8 else b := 0",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( product == 0 ) and ( b == 6 )"
+    ],
+    "q": [
+      "( product == 18 ) and ( b == 3 )"
+    ],
+    "linv": "b >= 0",
+    "program": "product := ( b * ?? ) ; assert ( product == ( b * 3 ) ) ; if ( product == 0 ) then b := 6 else b := 3",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( sum == 0 ) and ( a == 8 )"
+    ],
+    "q": [
+      "( sum == 13 ) and ( a == 3 )"
+    ],
+    "linv": "a >= 0",
+    "program": "sum := ( a + ?? ) ; assert ( sum == ( a + 5 ) ) ; if ( sum == 0 ) then a := 8 else a := 3",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( a == 0 ) and ( b == 6 )"
+    ],
+    "q": [
+      "( a == 0 ) and ( b == 0 )"
+    ],
+    "linv": "b >= 0",
+    "program": "a := ( b * ?? ) ; assert ( a == ( b * 6 ) ) ; while ( b > 0 ) do ( b := b - 1 )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( product == 0 ) and ( b == 3 )"
+    ],
+    "q": [
+      "( product == 6 ) and ( b == 2 )"
+    ],
+    "linv": "b >= 0",
+    "program": "product := ( b * ?? ) ; assert ( product == ( b * 2 ) ) ; if ( product == 0 ) then while ( b < 3 ) do ( b := b + 1 ) else b := 2",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "x >= 0"
+    ],
+    "q": [
+      "x == 0"
+    ],
+    "linv": "( x >= 0 )",
+    "program": "while x > 0 do ( x := x - 1 )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 10 )"
+    ],
+    "q": [
+      "( x == 100 )"
+    ],
+    "linv": "False",
+    "program": "x := x * x",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( counter == 0 ) and ( sum == 0 )"
+    ],
+    "q": [
+      "sum == 45"
+    ],
+    "linv": "( sum == ( counter * ( ( counter - 1 ) / 2 ) ) ) and ( counter <= 10 )",
+    "program": "while counter < 10 do ( counter := counter + 1 ; sum := sum + counter )",
+    "assert": [
+      true,
+      true,
+      false
+    ]
+  },
+  {
+    "p": [
+      "i >= 0"
+    ],
+    "q": [
+      "i == 0"
+    ],
+    "linv": "( i >= 0 )",
+    "program": "while i > 0 do ( i := i - 1 )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "z == 2"
+    ],
+    "q": [
+      "z == 8"
+    ],
+    "linv": "False",
+    "program": "z := z ** 3",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( base == 2 ) and ( exp == 5 ) and ( result == 1 )"
+    ],
+    "q": [
+      "result == 32"
+    ],
+    "linv": "( exp >= 0 )",
+    "program": "while exp > 0 do ( result := result * base ; exp := exp - 1 )",
+    "assert": [
+      false,
+      false,
+      false
+    ]
+  },
+  {
+    "p": [
+      "( val == 1024 )"
+    ],
+    "q": [
+      "val == 1"
+    ],
+    "linv": "val >= 1",
+    "program": "while val > 1 do ( val := val / 2 )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( a == 10 ) and ( b == 20 )"
+    ],
+    "q": [
+      "( a == 20 ) and ( b == 10 )"
+    ],
+    "linv": "False",
+    "program": "temp := a ; a := b ; b := temp",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 0 ) and ( y == 0 )"
+    ],
+    "q": [
+      "( x == 10 ) and ( y == 20 )"
+    ],
+    "linv": "False",
+    "program": "x := 10 ; y := 20",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 16 )"
+    ],
+    "q": [
+      "x == 1"
+    ],
+    "linv": "( x >= 1 )",
+    "program": "while x > 1 do ( x := x / 2 )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( value == 500 )"
+    ],
+    "q": [
+      "value == 1"
+    ],
+    "linv": "( value >= 1 )",
+    "program": "while value > 1 do ( value := value / 2 )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 2 ) and ( y == 3 )"
+    ],
+    "q": [
+      "( x == 2 ) and ( y == 18 )"
+    ],
+    "linv": "False",
+    "program": "y := ( ( x * y ) * y )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 5 ) and ( y == 4 )"
+    ],
+    "q": [
+      "( result == 20 )"
+    ],
+    "linv": "False",
+    "program": "result := x * y",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( a == 3 ) and ( b == 7 )"
+    ],
+    "q": [
+      "( c == 10 )"
+    ],
+    "linv": "False",
+    "program": "c := a + b",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( u == 8 ) and ( v == 5 )"
+    ],
+    "q": [
+      "( diff == 3 )"
+    ],
+    "linv": "False",
+    "program": "diff := u - v",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x== 6 )"
+    ],
+    "q": [
+      "( squared == 36 )"
+    ],
+    "linv": "False",
+    "program": "squared := x * x",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 5 )"
+    ],
+    "q": [
+      "x == 25"
+    ],
+    "linv": "False",
+    "program": "x := x * ??",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( a == 10 )"
+    ],
+    "q": [
+      "b == 100"
+    ],
+    "linv": "False",
+    "program": "b := a * ??",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 50 )"
+    ],
+    "q": [
+      "x == 5"
+    ],
+    "linv": "False",
+    "program": "x := x / ??",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 1 )"
+    ],
+    "q": [
+      "x == 10000000000"
+    ],
+    "linv": "( x <= 10000000000 )",
+    "program": "while x < 10000000000 do ( x := x + 1 )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 0 ) and ( y == 0 )"
+    ],
+    "q": [
+      "( x == 10 ) and ( y == -5 )"
+    ],
+    "linv": "False",
+    "program": "x := x + 1 ; x := x + 2 ; x := x + 3 ; x := x + 4 ; y := y - 1 ; y := y - 2 ; y := y - 2",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "x >= 0"
+    ],
+    "q": [
+      "x == 0"
+    ],
+    "linv": "( x >= 0 )",
+    "program": "while x > 0 do ( x := x - 1 )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 10 )"
+    ],
+    "q": [
+      "( x == 100 )"
+    ],
+    "linv": "False",
+    "program": "x := x * x",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( counter == 0 ) and ( sum == 0 )"
+    ],
+    "q": [
+      "sum == 45"
+    ],
+    "linv": "( sum == ( counter * ( ( counter - 1 ) / 2 ) ) ) and ( counter <= 10 )",
+    "program": "while counter < 10 do ( counter := counter + 1 ; sum := sum + counter )",
+    "assert": [
+      true,
+      true,
+      false
+    ]
+  },
+  {
+    "p": [
+      "i >= 0"
+    ],
+    "q": [
+      "i == 0"
+    ],
+    "linv": "( i >= 0 )",
+    "program": "while i > 0 do ( i := i - 1 )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "z == 2"
+    ],
+    "q": [
+      "z == 8"
+    ],
+    "linv": "False",
+    "program": "z := z ** 3",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( base == 2 ) and ( exp == 5 ) and ( result == 1 )"
+    ],
+    "q": [
+      "result == 32"
+    ],
+    "linv": "( exp >= 0 )",
+    "program": "while exp > 0 do ( result := result * base ; exp := exp - 1 )",
+    "assert": [
+      false,
+      false,
+      false
+    ]
+  },
+  {
+    "p": [
+      "( val == 1024 )"
+    ],
+    "q": [
+      "val == 1"
+    ],
+    "linv": "val >= 1",
+    "program": "while val > 1 do ( val := val / 2 )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( a == 10 ) and ( b == 20 )"
+    ],
+    "q": [
+      "( a == 20 ) and ( b == 10 )"
+    ],
+    "linv": "False",
+    "program": "temp := a ; a := b ; b := temp",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 0 ) and ( y == 0 )"
+    ],
+    "q": [
+      "( x == 10 ) and ( y == 20 )"
+    ],
+    "linv": "False",
+    "program": "x := 10 ; y := 20",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 16 )"
+    ],
+    "q": [
+      "x == 1"
+    ],
+    "linv": "( x >= 1 )",
+    "program": "while x > 1 do ( x := x / 2 )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( value == 500 )"
+    ],
+    "q": [
+      "value == 1"
+    ],
+    "linv": "( value >= 1 )",
+    "program": "while value > 1 do ( value := value / 2 )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 2 ) and ( y == 3 )"
+    ],
+    "q": [
+      "( x == 2 ) and ( y == 18 )"
+    ],
+    "linv": "False",
+    "program": "y := ( ( x * y ) * y )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 5 ) and ( y == 4 )"
+    ],
+    "q": [
+      "( result == 20 )"
+    ],
+    "linv": "False",
+    "program": "result := x * y",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( a == 3 ) and ( b == 7 )"
+    ],
+    "q": [
+      "( c == 10 )"
+    ],
+    "linv": "False",
+    "program": "c := a + b",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( u == 8 ) and ( v == 5 )"
+    ],
+    "q": [
+      "( diff == 3 )"
+    ],
+    "linv": "False",
+    "program": "diff := u - v",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x== 6 )"
+    ],
+    "q": [
+      "( squared == 36 )"
+    ],
+    "linv": "False",
+    "program": "squared := x * x",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 5 )"
+    ],
+    "q": [
+      "x == 25"
+    ],
+    "linv": "False",
+    "program": "x := x * ??",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( a == 10 )"
+    ],
+    "q": [
+      "b == 100"
+    ],
+    "linv": "False",
+    "program": "b := a * ??",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 50 )"
+    ],
+    "q": [
+      "x == 5"
+    ],
+    "linv": "False",
+    "program": "x := x / ??",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 1 )"
+    ],
+    "q": [
+      "x == 10000000000"
+    ],
+    "linv": "( x <= 10000000000 )",
+    "program": "while x < 10000000000 do ( x := x + 1 )",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 0 ) and ( y == 0 )"
+    ],
+    "q": [
+      "( x == 10 ) and ( y == -5 )"
+    ],
+    "linv": "False",
+    "program": "x := x + 1 ; x := x + 2 ; x := x + 3 ; x := x + 4 ; y := y - 1 ; y := y - 2 ; y := y - 2",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 0 ) and ( y == 0 )"
+    ],
+    "q": [
+      "( x == 10 ) and ( y == -5 )"
+    ],
+    "linv": "False",
+    "program": "x := x + ?? ; x := x + ?? ; x := x + ?? ; x := x + ?? ; y := y - ?? ; y := y - ?? ; y := y - ??",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( a == 5 )"
+    ],
+    "q": [
+      "( a == 15 )"
+    ],
+    "linv": "False",
+    "program": "a := a + ?? ; a := a + ?? ; a := a + ??",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( b == 1 )"
+    ],
+    "q": [
+      "( b == 1 ) and ( c == 10 )"
+    ],
+    "linv": "False",
+    "program": "c := b + ?? ; c := c * ??",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( d == -10 )"
+    ],
+    "q": [
+      "( d == 10 )"
+    ],
+    "linv": "False",
+    "program": "d := d + ?? ; d := d + ?? ; d := d * ??",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( e == 100 )"
+    ],
+    "q": [
+      "( e == 0 )"
+    ],
+    "linv": "False",
+    "program": "e := e - ?? ; e := e - ?? ; e := e - ??",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( f == 0 )"
+    ],
+    "q": [
+      "( f == -20 )"
+    ],
+    "linv": "False",
+    "program": "f := f - ?? ; f := f - ??",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( g == 2 )"
+    ],
+    "q": [
+      "( g == 100 )"
+    ],
+    "linv": "False",
+    "program": "g := g + ?? ; g := g * ?? ; g := g - ?? ; g := g / ?? ; g := g * ?? ; g := g + ??",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( h == 1 )",
+      "( k == 2 )"
+    ],
+    "q": [
+      "( h == 10 )",
+      "( k == 20 )"
+    ],
+    "linv": "False",
+    "program": "h := h + ?? ; k := k * ??",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( z == 100 )",
+      "( k == 200 )"
+    ],
+    "q": [
+      "( z == 101 )",
+      "( k == 199 )"
+    ],
+    "linv": "False",
+    "program": "z := z + 1 ; k := k - 1",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( x == 4 )",
+      "( y == 8 )"
+    ],
+    "q": [
+      "( x == 12 )",
+      "( y == 2 )"
+    ],
+    "linv": "False",
+    "program": "x := x * 3 ; y := y / 4",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( a == 1 )",
+      "( b == 2 )",
+      "( c == 3 )"
+    ],
+    "q": [
+      "( a == 2 )",
+      "( b == 3 )",
+      "( c == 4 )"
+    ],
+    "linv": "False",
+    "program": "a := a + 1 ; b := b + 1 ; c := c + 1",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( a == 1 )",
+      "( b == 2 )",
+      "( c == 3 )",
+      "( d == 4 )"
+    ],
+    "q": [
+      "( a == 2 )",
+      "( b == 3 )",
+      "( c == 4 )",
+      "( d == 5 )"
+    ],
+    "linv": "False",
+    "program": "a := a + 1 ; b := b + 1 ; c := c + 1 ; d := d + 1",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( e == 5 )",
+      "( f == 6 )",
+      "( g == 7 )",
+      "( h == 8 )",
+      "( i == 9 )"
+    ],
+    "q": [
+      "( e == 6 )",
+      "( f == 7 )",
+      "( g == 8 )",
+      "( h == 9 )",
+      "( i == 10 )"
+    ],
+    "linv": "False",
+    "program": "e := e + 1 ; f := f + 1 ; g := g + 1 ; h := h + 1 ; i := i + 1",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( j == 10 )",
+      "( k == 11 )",
+      "( l == 12 )",
+      "( m == 13 )",
+      "( n == 14 )",
+      "( o == 15 )"
+    ],
+    "q": [
+      "( j == 11 )",
+      "( k == 12 )",
+      "( l == 13 )",
+      "( m == 14 )",
+      "( n == 15 )",
+      "( o == 16 )"
+    ],
+    "linv": "False",
+    "program": "j := j + 1 ; k := k + 1 ; l := l + 1 ; m := m + 1 ; n := n + 1 ; o := o + 1",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( p == 16 )",
+      "( q == 17 )",
+      "( r == 18 )",
+      "( s == 19 )",
+      "( t == 20 )",
+      "( u == 21 )",
+      "( v == 22 )"
+    ],
+    "q": [
+      "( p == 17 )",
+      "( q == 18 )",
+      "( r == 19 )",
+      "( s == 20 )",
+      "( t == 21 )",
+      "( u == 22 )",
+      "( v == 23 )"
+    ],
+    "linv": "False",
+    "program": "p := p + 1 ; q := q + 1 ; r := r + 1 ; s := s + 1 ; t := t + 1 ; u := u + 1 ; v := v + 1",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  },
+  {
+    "p": [
+      "( a == 1 )",
+      "( b == 2 )"
+    ],
+    "q": [
+      "( a == 1 )",
+      "( b == 40 )"
+    ],
+    "linv": "False",
+    "program": "a := a * ?? ; b := b * ??",
+    "assert": [
+      true,
+      true,
+      true
+    ]
+  }
+]

@@ -1,0 +1,43 @@
+:root {
+    /* Border */
+    --radius: 1rem;
+    /* Responsive */
+    --screen-2xl: 1536px;
+    --screen-xl: 1280px;
+    --screen-lg: 1024px;
+    --screen-md: 900px;
+    --screen-sm: 480px;
+    --screen-xs: 360px;
+
+    --space-smallest: 0.375rem;
+    --space-medium: 1.8rem;
+    --space-small: 0.8rem;
+    --space: 2.8rem;
+
+    /* Typography */
+    --text-base: 1rem;
+}
+
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.full-center {
+    min-height: 100dvh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.accent {
+    color: hsl(var(--accent))
+}
+
+.ez-flex {
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    gap: 0.5rem;
+}

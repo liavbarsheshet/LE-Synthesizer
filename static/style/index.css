@@ -1,0 +1,68 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  position: relative;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+*::selection {
+  background-color: hsl(var(--foreground));
+  color: hsl(var(--background));
+}
+
+/* Layout */
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-content: center;
+}
+
+.justify-self-center {
+  justify-self: center;
+}
+.align-self-center {
+  align-self: center;
+}
+

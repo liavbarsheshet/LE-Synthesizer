@@ -1,0 +1,135 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small {
+  all: unset;
+
+  line-height: 1.5rem;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 2rem 0;
+}
+
+h5,
+h6 {
+  margin: 1rem 0;
+}
+
+h1 {
+  font-size: calc(var(--text-base) + 3.5rem);
+  scroll-margin: 20px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: calc(var(--text-base) + 2.75rem);
+  scroll-margin: 20px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: calc(var(--text-base) + 2rem);
+  scroll-margin: 20px;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: calc(var(--text-base) + 1.2rem);
+  scroll-margin: 20px;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: calc(var(--text-base) + 0.6rem);
+  scroll-margin: 20px;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: calc(var(--text-base) + 0.2rem);
+  scroll-margin: 20px;
+  font-weight: 500;
+}
+
+p {
+  font-size: var(--text-base);
+}
+
+blockquote {
+  border-left: 2px solid var(--border);
+  padding-left: 1.5rem;
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+small {
+  font-size: 0.833rem;
+  margin: 0.5rem 0;
+}
+
+.lead {
+  font-size: calc(var(--text-base) + 0.25rem);
+  color: hsl(var(--muted-foreground));
+  line-height: 1.75rem;
+}
+
+.muted {
+  font-size: calc(var(--text-base) - 0.2rem);
+  color: hsla(var(--muted-foreground), 1);
+  line-height: 1.25rem;
+}
+
+/* Font Weight */
+.thin {
+  font-weight: 100;
+}
+
+.extra-light {
+  font-weight: 200;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.normal {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.semi-medium {
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.extra-bold {
+  font-weight: 800;
+}
+
+.black {
+  font-weight: 900;
+}
+
+/* Font Decoration */
+.strike-through {
+  text-decoration: line-through;
+}
+
+.italic {
+  font-style: italic;
+}

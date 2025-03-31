@@ -1,0 +1,292 @@
+main {
+    align-items: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    position: relative;
+    min-height: 100dvh;
+    min-width: 280px;
+    padding: 20px;
+    display: flex;
+    width: 100%;
+
+    & section {
+        margin-top: 1rem;
+        width: clamp(280px, 100%, 1024px);
+        position: relative;
+    }
+
+    & section.intro {
+        & p {
+            text-align: justify;
+        }
+    }
+}
+
+hr {
+    border: none; /* Remove the default border */
+    height: 1px; /* Set the height */
+    background-color: hsl(var(--foreground)); /* Set the color */
+    margin: 1rem 0; /* Add space above and below */
+}
+
+hr.dashed {
+    border-top: 1px dashed hsl(var(--foreground)); /* Remove the default border */
+    height: 1px; /* Set the height */
+    background-color: transparent; /* Set the color */
+}
+
+nav {
+    justify-content: center;
+    padding: 0.5rem 0;
+    display: flex;
+    gap: 2rem;
+}
+
+a {
+    position: relative;
+    color: hsl(var(--foreground));
+    transition: color 0.3s ease;
+    text-decoration: none;
+
+    &:visited,
+    &:active {
+        color: inherit;
+    }
+
+    &:hover {
+        color: hsl(var(--accent));
+    }
+
+    &::after {
+        background-color: hsl(var(--accent));
+        transition: width 0.3s ease, left 0.3s ease;
+        position: absolute;
+        bottom: -4px;
+        content: "";
+        height: 2px;
+        width: 0px;
+        left: 50%;
+    }
+
+    &:hover::after {
+        width: 100%;
+        left: 0%;
+    }
+}
+
+form,
+div#more_inputs {
+    flex-direction: column;
+    position: relative;
+    display: flex;
+}
+
+input,
+textarea {
+    all: unset;
+}
+
+select {
+    color: hsl(var(--foreground));
+    background: transparent;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: var(--base-size);
+
+    & option {
+        color: hsl(var(--background));
+    }
+}
+
+.space {
+    position: relative;
+    margin-top: 1rem;
+}
+
+input,
+textarea,
+div#console,
+select {
+    border: 1px solid hsla(var(--foreground), 0.5);
+    transition: border-color ease 0.3s;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+
+    &:focus {
+        border-color: hsl(var(--accent));
+    }
+}
+
+textarea,
+div#console {
+    text-wrap: break-word;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 320px;
+    overflow-y: auto;
+    overflow-x: none;
+    max-width: 100%;
+    height: 320px;
+}
+
+div#console {
+    white-space: unset;
+}
+
+div.button-group {
+    justify-content: center;
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+}
+
+button.bt {
+    all: unset;
+
+    /* Mill */
+
+    /* Style */
+    background-color: hsl(var(--selected-background));
+    color: hsl(var(--selected-foreground));
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border-radius: 4px;
+    justify-content: center;
+    box-sizing: border-box;
+    white-space: nowrap;
+    align-items: center;
+    position: relative;
+    font-weight: 500;
+    height: 2.5rem;
+    width: 180px;
+    display: flex;
+
+    /* transition */
+    transition: color ease 0.2s, background-color ease 0.2s;
+
+    &::selection {
+        background-color: transparent;
+        color: unset;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &[data-variant="outline"] {
+        border: 1px solid hsl(var(--foreground));
+        color: hsl(var(--foreground));
+        background-color: transparent;
+    }
+
+    &[data-variant="outline"]:hover {
+        background-color: hsl(var(--foreground));
+        color: hsl(var(--background));
+    }
+
+    &[data-variant="accent"] {
+        border: 1px solid hsl(var(--accent));
+        color: hsl(var(--accent));
+        background-color: transparent;
+    }
+
+    &[data-variant="accent"]:hover {
+        background-color: hsl(var(--accent));
+        color: hsl(var(--foreground));
+    }
+}
+
+section.output {
+    margin-top: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.submission {
+    text-align: center;
+    justify-self: center;
+}
+
+.loading {
+    display: none;
+    background: url(/static/spinner.svg) center/contain no-repeat;
+    animation: rotate 0.8s ease 0s forwards infinite;
+    margin-right: 0.8rem;
+    width: 16px;
+    aspect-ratio: 1;
+}
+
+form[data-loading="true"] .loading {
+    display: inline;
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    opacity: 0.4;
+
+}
+
+*[data-completed="true"],
+*[data-highlight="true"] {
+    color: hsl(var(--accent));
+}
+
+*[data-completed="false"] {
+    color: hsl(var(--destructive));
+}
+
+span.console-status {
+    color: hsl(var(--primary));
+}
+
+button.remove-bt {
+    display: inline;
+    background: transparent;
+    border: 2px solid hsl(var(--foreground));
+    font-weight: 600;
+    width: 22px;
+    height: 22px;
+    color: hsl(var(--foreground));
+    transition: ease 0.3s;
+    border-radius: 100%;
+    box-sizing: border-box;
+
+    &:hover {
+        cursor: pointer;
+        background: hsl(var(--destructive));
+        border: 2px solid hsl(var(--destructive));
+    }
+
+}
+
+div.input-ui {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+section#graphs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+
+    & p {
+        margin-bottom: 1rem;
+    }
+}

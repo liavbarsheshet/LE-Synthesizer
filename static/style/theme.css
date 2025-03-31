@@ -1,0 +1,16 @@
+:root {
+  --background: 224, 25%, 12%;
+  --foreground: 60, 14%, 99%;
+
+  --accent: 152, 64%, 45%;
+  --destructive: 0, 100%, 60%;
+  --destructive-foreground: 60, 14%, 99%;
+  --primary: 262, 69%, 63%;
+  --primary-foreground: 60, 14%, 99%;
+
+  --radius: 1rem;
+
+  /* Default color */
+  --selected-background: var(--foreground);
+  --selected-foreground: var(--background);
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>236347 - Final Project | Benchmark</title>
+    <link rel="icon" href="../static/icon.svg" sizes="any" type="image/svg+xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/style/typography.css"/>
+    <link rel="stylesheet" href="../static/style/theme.css"/>
+    <link rel="stylesheet" href="../static/style/index.css"/>
+    <link rel="stylesheet" href="../static/style/classes.css"/>
+    <link rel="stylesheet" href="../static/style/app.css"/>
+    <script src="../static/src/particles.min.js"></script>
+    <script src="../static/src/d3.v7.min.js"></script>
+    <script src="../static/src/particles.js" async></script>
+    <script src="../static/src/benchmark.js" async></script>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<div id="particles-js"></div>
+<main>
+    <section class="intro center">
+        <h4>Welcome to our Synthesizer!</h4>
+        <p>
+            This tool is designed to verify a while_lang program with synthesis techniques. By utilizing constraint
+            synthesis methods, our platform fills in missing integer holes in your code. Explore the possibilities with
+            our interactive interface.
+        </p>
+        <hr/>
+        <nav>
+            <a href="/">Playground</a>
+            <a href="/benchmark">Benchmark</a>
+            <a href="/readme" target="_blank">Readme</a>
+        </nav>
+        <hr/>
+    </section>
+    <section>
+        <form id="benchmark">
+            <label for="tests-json">JSON Test File</label>
+            <textarea id="tests-json" name="tests" placeholder="" style="resize: none" required></textarea>
+            <div class="button-group">
+                <button type="submit" class="bt" id="begin-bt" data-variant="accent">
+                    <div class="loading"></div>
+                    Begin
+                </button>
+            </div>
+        </form>
+    </section>
+    <section>
+        <hr class="dashed"/>
+    </section>
+    <section id="graphs">
+    </section>
+    <section class="intro">
+        <small class="submission"
+        >Made by Liav Barsheshet 312429269 and Elshan Geydarov 313735136.</small
+        >
+    </section>
+</main>
+</body>
+</html>

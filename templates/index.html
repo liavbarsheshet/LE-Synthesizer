@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>236347 - Final Project | Playground</title>
+    <link rel="icon" href="../static/icon.svg" sizes="any" type="image/svg+xml"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/style/typography.css"/>
+    <link rel="stylesheet" href="../static/style/theme.css"/>
+    <link rel="stylesheet" href="../static/style/index.css"/>
+    <link rel="stylesheet" href="../static/style/classes.css"/>
+    <link rel="stylesheet" href="../static/style/app.css"/>
+    <script src="../static/src/particles.min.js"></script>
+    <script src="../static/src/particles.js" async></script>
+    <script src="../static/src/synth.js" async></script>
+    <script src="../static/src/app.js" async></script>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+<div id="particles-js"></div>
+<main>
+    <section class="intro center">
+        <h4>Welcome to our Synthesizer!</h4>
+        <p>
+            This tool is designed to verify a while_lang program with synthesis techniques. By utilizing constraint
+            synthesis methods, our platform fills in missing integer holes in your code. Explore the possibilities with
+            our interactive interface.
+        </p>
+        <hr/>
+        <nav>
+            <a href="/">Playground</a>
+            <a href="/benchmark">Benchmark</a>
+            <a href="/readme" target="_blank">Readme</a>
+        </nav>
+        <hr/>
+    </section>
+    <section>
+        <label for="mode">Select Mode</label>
+        <select id="mode">
+        </select>
+        <h5 id="mode-headline"></h5>
+        <p id="mode-description"></p>
+        <hr class="dashed"/>
+    </section>
+    <section>
+        <form id="synthesis">
+            <label for="linv">Linv</label>
+            <input type="text" id="linv" name="linv" placeholder="" required/>
+            <div id="more_inputs"></div>
+            <div class="button-group">
+                <button id="add_more" data-variant="outline" class="bt" type="button">Add Inputs</button>
+            </div>
+            <label for="program">Program</label>
+            <textarea id="program" name="program" placeholder="" style="resize: none" required></textarea>
+            <div class="button-group">
+                <button type="reset" class="bt" data-variant="outline">Reset</button>
+                <button type="submit" class="bt" data-variant="accent">
+                    <div class="loading"></div>
+                    Synthesize
+                </button>
+            </div>
+        </form>
+    </section>
+    <section>
+        <hr class="dashed"/>
+    </section>
+    <section class="output">
+        <label for="console">Output</label>
+        <div id="console" style="resize: none"></div>
+    </section>
+    <section class="intro">
+        <small class="submission">Made by Liav Barsheshet 312429269 and Elshan Geydarov 313735136.</small>
+    </section>
+</main>
+</body>
+</html>
